@@ -1,15 +1,15 @@
 require 'minitest/autorun'
-require_relative 'employee'
-require_relative 'department'
+require_relative '../employee'
+require_relative '../department'
 
 class EmployeeTest < Minitest::Test
   def employee
     ::Employee.new
   end
 
-  # 1
+  # 1 - PASS
   def test_creating_a_new_employee
-      skip
+      assert_equal Employee, employee.class
   end
 
   # 2
