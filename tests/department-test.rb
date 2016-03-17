@@ -1,3 +1,7 @@
+require 'minitest/autorun'
+require_relative 'employee'
+require_relative 'department'
+
 class DepartmentTest < Minitest::Test
   def employee
     ::Department.new
