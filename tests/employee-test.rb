@@ -5,7 +5,7 @@ require_relative "../department"
 
 class EmployeeTest < Minitest::Test
   def setup
-    @bob = Employee.new("Bob", "bob@gmail.com", "202-000-0000", "$50000")
+    @bob = Employee.new("Bob", "bob@gmail.com", "202-000-0000", 50000)
   end
 
   # 1
@@ -21,7 +21,7 @@ class EmployeeTest < Minitest::Test
 
   # 3
   def test_retrieving_employee_salary
-      assert_equal "$50000", @bob.salary
+      assert_equal 50000, @bob.salary
   end
 
   # 4
@@ -33,11 +33,12 @@ class EmployeeTest < Minitest::Test
   # 5
   def test_marking_employee_performance
       @bob.performance =  "Satisfactory"
-      @bob.performance = "Satisfactory", @bob.performance
+      assert_equal "Satisfactory", @bob.performance
   end
 
   # 6
   def test_give_employee_a_raise
-      skip
+      @bob.give_raise(0.05) #52,500
+      assert_equal 52500, @bob.salary
   end
 end
