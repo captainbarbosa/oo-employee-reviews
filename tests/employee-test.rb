@@ -4,28 +4,30 @@ require_relative "../employee"
 require_relative "../department"
 
 class EmployeeTest < Minitest::Test
-  def employee
-    ::Employee.new("Bob", "bob@gmail.com", "202-000-0000", "$50000")
+  def setup
+    @bob = Employee.new("Bob", "bob@gmail.com", "202-000-0000", "$50000")
   end
 
   # 1
   def test_creating_a_new_employee
-      assert_equal Employee, employee.class
+      assert_equal Employee, @bob.class
+      #            ^ Expected         ^ Actual
   end
 
   # 2
   def test_retrieving_employee_name
-      assert_equal "Bob", employee.name
+      assert_equal "Bob", @bob.name
   end
 
   # 3
   def test_retrieving_employee_salary
-      skip
+      assert_equal "$50000", @bob.salary
   end
 
   # 4
   def test_adding_review_text_to_employee
-      skip
+      @bob.review_text =  "Bob is a good employee"
+      assert_equal "Bob is a good employee", @bob.review_text
   end
 
   # 5
