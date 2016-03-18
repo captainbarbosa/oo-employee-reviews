@@ -1,6 +1,7 @@
-require 'minitest/autorun'
-require_relative 'employee'
-require_relative 'department'
+require "minitest/autorun"
+require "minitest/pride"
+require_relative "../employee"
+require_relative "../department"
 
 class DepartmentTest < Minitest::Test
   def employee
