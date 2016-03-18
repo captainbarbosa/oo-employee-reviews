@@ -32,7 +32,8 @@ class EmployeeTest < Minitest::Test
 
   # 5
   def test_marking_employee_performance
-      skip
+      @bob.performance =  "Satisfactory"
+      @bob.performance = "Satisfactory", @bob.performance
   end
 
   # 6
