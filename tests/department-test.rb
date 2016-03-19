@@ -4,13 +4,13 @@ require_relative "../employee"
 require_relative "../department"
 
 class DepartmentTest < Minitest::Test
-  def employee
-    ::Department.new
+  def setup
+    @sales = Department.new("Sales")
   end
 
     # 1
   def test_creating_a_new_department
-    skip
+    assert_equal Department, @sales.class
   end
 
   # 2
