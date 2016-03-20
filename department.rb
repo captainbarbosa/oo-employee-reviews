@@ -7,6 +7,14 @@ class Department
   end
 
   def add_employee(person)
+    # {"Name" => Person object, "Name" => Person object}
     @employees[person.name] = person
   end
+
+  def dept_salary
+    sum = 0
+    @employees.each_key { |individual| sum += @employees[individual].salary }
+    sum
+  end
+
 end
