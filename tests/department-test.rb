@@ -23,7 +23,7 @@ class DepartmentTest < Minitest::Test
 
   # 3
   def test_retrieving_department_name
-    skip
+    assert_equal "Sales", @sales.dept_name
   end
 
   # 4
