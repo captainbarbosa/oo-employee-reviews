@@ -17,4 +17,11 @@ class Department
     sum
   end
 
+  def dept_raise(bonus)
+    @employees.each_key { |individual|
+        if @employees[individual].performance == "Satisfactory"
+          @employees[individual].salary = @employees[individual].salary + bonus
+        end
+    }
+  end
 end

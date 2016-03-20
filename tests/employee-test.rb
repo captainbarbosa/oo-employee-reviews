@@ -38,7 +38,7 @@ class EmployeeTest < Minitest::Test
 
   # 6
   def test_give_employee_a_raise
-      @bob.give_raise(0.05) #52,500
+      @bob.give_raise(0.05) #52500
       assert_equal 52500, @bob.salary
   end
 end
